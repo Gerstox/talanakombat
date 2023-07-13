@@ -20,12 +20,12 @@
     },
     "fight3": {
       "player1": {
-        "movimientos": ["DSD", "S"] ,
-        "golpes": [ "P", ""]
+        "movements": ["DSD", "S"] ,
+        "hits": [ "P", ""]
       },
     "player2": {
-      "movimientos": ["", "ASA", "DA", "AAA", "", "SA"],
-      "golpes": ["P", "", "P", "K", "K", "K"]
+      "movements": ["", "ASA", "DA", "AAA", "", "SA"],
+      "hits": ["P", "", "P", "K", "K", "K"]
     }
   }
 }
