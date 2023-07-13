@@ -1,0 +1,31 @@
+{
+  "fight1": {
+    "player1": {
+      "movements": ["D", "DSD", "S", "DSD", "SD"],
+      "hits": ["K", "P", "", "K", "P"]
+    },
+    "player2": {
+      "movements": ["SA","SA","SA","ASA","SA"],
+      "hits":["K","","K","P","P"]
+    }
+  },
+  "fight2": {
+    "player1": {
+      "movements":["SDD", "DSD", "SA", "DSD"],
+      "hits":["K", "P", "K", "P"]
+    },
+    "player2": {
+      "movements": ["DSD", "WSAW", "ASA", "", "ASA", "SA"],
+      "hits":["P", "K", "K", "K", "P", "k"]}
+    },
+    "fight3": {
+      "player1": {
+        "movimientos": ["DSD", "S"] ,
+        "golpes": [ "P", ""]
+      },
+    "player2": {
+      "movimientos": ["", "ASA", "DA", "AAA", "", "SA"],
+      "golpes": ["P", "", "P", "K", "K", "K"]
+    }
+  }
+}
