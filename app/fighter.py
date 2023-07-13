@@ -32,6 +32,7 @@ class Fighter:
       ''')
     else:
       print(self.error[1])
+      raise Exception(self.error[1])
 
   def calc_combinations(self):
     return len(self.movements) + len(self.hits)
@@ -43,15 +44,29 @@ class Fighter:
     return len("".join(self.hits))
 
   def attack(self):
-    movement = self.movements[self.round]
-    hit = self.hits[self.round]
-    merge_buttons = "".join([movement, hit])
-    if self.is_special_attack(merge_buttons):
-      print(f'{self.name} usa un {self.current_attack_name}')
+    if self.max_round > self.round:
+      movement = self.movements[self.round]
+      hit = self.hits[self.round]
+      merge_buttons = "".join([movement, hit])
+      if self.is_special_attack(merge_buttons):
+        print(f'{self.name} {self.current_attack_name}')
+      else:
+
+        attack_name=""
+        if (len(movement) > 1):
+          attack_name = "se mueve"
+        if (movement in Utils.basic_actions):
+          attack_name = Utils.basic_actions[movement]
+        if(hit in Utils.basic_actions):
+          if attack_name != "":
+            attack_name += " y "
+          attack_name += Utils.basic_actions[hit]
+        print(f"{self.name} {attack_name}")
+        self.current_attack_name = f"{self.name} {attack_name}"
+        self.current_attack_damage = 1
     else:
-      print(f'{self.name}')
-      self.current_attack_name = "ataque basico"
-      self.current_attack_damage = 1
+      self.error = Utils.messages["no_attacks"].format(player=self.player)
+      raise Exception(self.error)
     self.round += 1
 
   def is_special_attack(self, attack):

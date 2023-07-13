@@ -1,5 +1,5 @@
 class Utils:
-  options = [1,2,3,4]
+  options = [0,1,2,3,4]
 
   players = 2
 
@@ -11,12 +11,12 @@ class Utils:
       "lastname": "Stallone",
       "special_attacks": [
         {
-          "name": "Taladoken!",
+          "name": "usa un Taladoken!",
           "combination": ["DSD", "P"],
           "damage": 3,
         },
         {
-          "name": "Remuyuken!",
+          "name": "conecta un Remuyuken!",
           "combination": ["SD", "K"],
           "damage": 2,
         }
@@ -27,12 +27,12 @@ class Utils:
       "lastname": "Shuatseneguer",
       "special_attacks": [
         {
-          "name": "Remuyuken!",
+          "name": "conecta un Remuyuken!",
           "combination": ["SA", "K"],
           "damage": 3,
         },
         {
-          "name": "Taladoken!",
+          "name": "usa un Taladoken!",
           "combination": ["ASA", "P"],
           "damage": 2,
         }
@@ -52,6 +52,7 @@ class Utils:
   messages = {
     "select_combat": '''
     Select your kombat:
+    0. Exit
     1. Fight 1
     2. Figth 2
     3. Fight 3
@@ -76,5 +77,9 @@ class Utils:
   'enter_movement': 'Enter movements for player {player} separated by comma ej: SA,SA,W,D:\n',
   'enter_hit': 'Enter hits for player {player} separated by comma ej: K,P,P,P:\n',
   'selected_fight': 'You have selected fight: {selected}\n',
-  'invalid_option': f'You have selected an incorrect option, please select between {options}'
+  'invalid_option': f'You have selected an incorrect option, please select between {options}',
+  'start_game': "Do you want to play again? Y/N",
+  'invalid_option_2': 'Invalid option use Y or N\n',
+  'byebye': 'Thanks for playing, good bye!\n',
+  'no_attacks': "There are no more attacks for {player}\n"
   }
