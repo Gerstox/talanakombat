@@ -17,3 +17,7 @@ Docker version 24.0.2, build cb74dfc
 `docker build -t talanakombat .`
 
 `docker run -ti talanakombat`
+
+## Screenshots
+
+![Alt text](image.png)
